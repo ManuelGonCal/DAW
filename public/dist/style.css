@@ -5,12 +5,6 @@ html {
 body {
   background: #262161;
   background: #efefef; }
-  body:before {
-    content: '';
-    display: block;
-    background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%);
-    height: 10px;
-    width: 100%; }
 
 .inner {
   max-width: 900px;
@@ -456,7 +450,7 @@ a {
   color: #303030; }
 
 p a {
-  border-bottom: 2px solid #FFC40E; }
+  border-bottom: 2px solid #ffc40e; }
 
 p {
   line-height: 2;
@@ -510,7 +504,7 @@ label {
 .form {
   background: white;
   padding: 2rem;
-  box-shadow: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%); }
+  box-shadow: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #ffc40e 85%, #48ded4 95%); }
   .form + .form {
     margin-top: 4rem; }
   .form h2 {
@@ -524,7 +518,10 @@ label {
   position: relative;
   width: 100%;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  background: #a0d9d9;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
   .search__results {
     background: white;
     position: absolute;
@@ -535,8 +532,8 @@ label {
     left: 0; }
   .search__input {
     font-size: 30px;
-    background: none;
-    color: white;
+    background-color: inherit;
+    color: #303030;
     outline: 0;
     border: 0; }
   .search__result {
@@ -545,6 +542,13 @@ label {
     border-bottom: 1px solid #ececec; }
     .search__result--active {
       background: #f1f1f1; }
+  .search i {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+    .search i:before {
+      font-size: 30px; }
 
 @keyframes slideIn {
   0% {
@@ -577,7 +581,7 @@ label {
     background: none;
     border: 0; }
     .flash__remove:hover {
-      color: #FFC40E; }
+      color: #ffc40e; }
   .flash:after {
     content: '';
     display: block;
@@ -607,7 +611,7 @@ label {
   padding: 0;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  background: #303030; }
+  background: #a0d9d9; }
   .nav__section {
     display: -ms-flexbox;
     display: flex; }
@@ -618,9 +622,8 @@ label {
     display: -ms-flexbox;
     display: flex; }
   .nav__link {
-    background: #303030;
-    color: white;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: #a0d9d9;
+    color: #303030;
     text-transform: uppercase;
     padding: 1.2rem 2rem 1rem 2rem;
     display: block;
@@ -637,12 +640,12 @@ label {
     .nav__link svg {
       width: 40px;
       transition: all 0.2s;
-      fill: white;
+      fill: #303030;
       margin-bottom: 1rem; }
     .nav__link:hover, .nav__link--active {
       border-bottom-color: rgba(0, 0, 0, 0.2);
       border-right-color: rgba(0, 0, 0, 0.05);
-      background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%) fixed; }
+      background-color: #49868c; }
       .nav__link:hover svg, .nav__link--active svg {
         -ms-transform: scale(1.2);
             transform: scale(1.2); }
@@ -694,9 +697,10 @@ label {
     .nav__link svg {
       max-width: 100%; }
     .nav__link--logo svg {
-      width: 100%; }
+      width: 100%;
+      fill: #303030; }
   .heart-count:before {
-    content: '\2665\FE0F';
+    content: "\2665\FE0F";
     margin-right: 1rem; } }
 
 .table {
@@ -819,9 +823,9 @@ label {
         background: #e6e6e6;
         padding: 1rem 1rem 1rem 4rem; }
       .tag__choice input:checked + label {
-        background: #FFC40E; }
+        background: #ffc40e; }
   .tag__link {
-    background: #FFC40E;
+    background: #ffc40e;
     color: #303030;
     display: -ms-flexbox;
     display: flex;
@@ -955,7 +959,7 @@ label {
     left: 0;
     content: '';
     display: block;
-    background: linear-gradient(0, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%);
+    background: linear-gradient(0, #48ded4 0%, #a026bf 20%, #e82c75 60%, #ffc40e 85%, #48ded4 95%);
     position: absolute;
     height: 100%;
     background-attachment: fixed; }
@@ -988,7 +992,7 @@ label {
     font-size: 1.2rem;
     color: #999999; }
   .review__stars {
-    color: #FFC40E; }
+    color: #ffc40e; }
   .review__body {
     padding: 2rem; }
   .review p {
@@ -1009,7 +1013,7 @@ label {
     .reviewer__stars input {
       display: none; }
       .reviewer__stars input:checked ~ label {
-        color: #FFC40E; }
+        color: #ffc40e; }
       .reviewer__stars input + label {
         font-size: 0;
         /* These are in the opposite DOM order
@@ -1102,7 +1106,7 @@ label {
 
 .button {
   border: 0;
-  background: #FFC40E;
+  background: #ffc40e;
   color: #303030;
   font-family: 'Panama';
   font-weight: 600; }
