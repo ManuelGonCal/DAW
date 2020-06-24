@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const md5 = require('md5');
 const mongodbErrorHandler = require('mongoose-mongodb-errors');
-const passportLocalMongoose = require('password-local-mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
+
 const Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
